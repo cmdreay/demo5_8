@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            div{
+                width:100px;
+                height:100px;
+                background:red;
+                position: absolute;
+                top:10px;
+                left:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div >213</div>
+        <script type="text/javascript">
+            document.addEventListener("touchmove", touch);
+            document.addEventListener("touchstart", touch1);
+            // document.addEventListener("touchend", touch);
+            var oDiv=document.querySelector('div');
+            var oLeft=oDiv.offsetLeft;
+            var oTop=oDiv.offsetTop;
+            var oL=0;
+            var oT=0;
+            // console.log(oLeft+"sdf"+oTop);
+            function touch1(ev){
+                var e=e||event;
+                 oL=e.touches[0].clientX-oLeft;
+                 oT=e.touches[0].clientY-oTop;
+            }
+            function touch(ev){
+                var e=e||event;
+                console.log(e.type);
+                //
+                
+                console.log(oL+"sdf"+oT); 
+                console.log(e.touches[0].clientX+","+e.touches[0].clientY);
+                oDiv.style.left=(e.touches[0].clientX-oL)+"px";
+                oDiv.style.top=(e.touches[0].clientY-oT)+"px";
+                
+            }
+        </script>
+    </body>
+</html>
