@@ -206,20 +206,9 @@
                     console.log(1233);
             });
             $(document).ready(function() {
-                 if($('audio')[0].paused==false){
-                    $('audio')[0].pause();
-                    $('.audioM img').attr({
-                        src: 'img/audio2.png'
-                    });
-                    $('.audioM img').css("animationPlayState",'paused');
-                }
-                else{
+                 
                     $('audio')[0].play();
-                    $('.audioM img').attr({
-                        src: 'img/audio1.png'
-                    });
-                    $('.audioM img').css("animationPlayState",'running');
-                }
+                    
             });
         </script>
     </body>
