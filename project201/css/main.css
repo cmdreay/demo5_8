@@ -163,6 +163,7 @@ body {
   animation: fn2 2s linear  infinite;
   position: absolute;
   bottom: 0.5rem;
+  left:50%;
 }
 @-webkit-keyframes fn2 {
   0% {
