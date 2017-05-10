@@ -205,8 +205,21 @@
             oM4.addEventListener('webkitAnimationStart', function(){
                     console.log(1233);
             });
-            $.jQuery(document).ready(function($) {
-                $('audio').play();
+            $(document).ready(function() {
+                 if($('audio')[0].paused==false){
+                    $('audio')[0].pause();
+                    $('.audioM img').attr({
+                        src: 'img/audio2.png'
+                    });
+                    $('.audioM img').css("animationPlayState",'paused');
+                }
+                else{
+                    $('audio')[0].play();
+                    $('.audioM img').attr({
+                        src: 'img/audio1.png'
+                    });
+                    $('.audioM img').css("animationPlayState",'running');
+                }
             });
         </script>
     </body>
