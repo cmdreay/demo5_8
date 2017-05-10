@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-align-items:center;
   background: url(../img/bg.jpg) no-repeat;
   background-size: cover;
 }
@@ -163,7 +164,6 @@ body {
   animation: fn2 2s linear  infinite;
   position: absolute;
   bottom: 0.5rem;
-  left:50%;
 }
 @-webkit-keyframes fn2 {
   0% {
